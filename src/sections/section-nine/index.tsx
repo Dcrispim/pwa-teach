@@ -40,21 +40,21 @@ const SectionNine: React.FC = () => {
       <section className='w-full h-full bg-orange-500 py-16 px-4 z-50'>
         <div className='flex flex-col h-full justify-center items-center text-white space-y-8'>
           <h1 className='text-3xl font-bold text-center'>{i18n('section_nine_title')}</h1>
-          <div className='flex flex-col justify-center items-center space-y-6 max-w-lg text-center'>
+          <div className='flex flex-col justify-center items-center space-y-6 max-w-lg text-center '>
             <p className='text-xl font-thin'>
               {i18n('section_nine_description')}
             </p>
-            <form onSubmit={handleSubmit(onSubmit)} className='grid space-y-4'>
+            <form onSubmit={handleSubmit(onSubmit)} className='grid space-y-10 w-full'>
             <InputGroup
               placeholder={i18n('email_placeholder')}
-              className='bg-white rounded-md w-100 md:w-80 text-black'
+                className='bg-white rounded-md w-full md:w-80 text-black m-0'
               label={i18n('email_label')}
               error={errors.email?.message}
               {...register('email')}
             />
             <TextAreaGroup
               placeholder={i18n('message_placeholder')}
-              className='bg-white rounded-md w-full md:w-80'
+                className='bg-white rounded-md w-[100%]  md:w-80'
               label={i18n('message_label')}
               error={errors.message?.message}
               {...register('message')}
@@ -91,7 +91,7 @@ type InputGroupProps = {
 
 const InputGroup: React.FC<InputGroupProps> = ({ name, label, error, className, ...props }) => {
   return (
-    <div className='w-fit md:w-full space-y-2'>
+    <div className='w-full md:w-full space-y-2'>
       {label && <Label htmlFor={name} className='text-sm font-medium text-white'>
         {label}
       </Label>}

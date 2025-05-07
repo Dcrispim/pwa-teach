@@ -5,7 +5,7 @@ import { Button } from './ui/button';
 const SignButton:React.FC = async (props) => {
     const i18n = await getI18n()
     return (
-        <Button variant={"default"} className='capitalize text-white font-semibold' {...props}>
+        <Button variant={"default"} className='capitalize text-white font-semibold' aria-label={i18n("sign up now")}  {...props}>
             { i18n('sign up now')}
         </Button>
     );

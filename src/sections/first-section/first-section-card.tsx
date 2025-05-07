@@ -35,11 +35,11 @@ const FirstSectionCard: React.FC = async () => {
             </CardSectionBody>
 
             <CardSectionBody role="group" aria-label="Call to Action Buttons">
-                <SignButton aria-label={i18n("Sign up for free")} />
+                <SignButton />
                 <Button
                     variant="ghost"
                     className='text-blue-600 font-semibold capitalize'
-                    aria-label={i18n("Watch platform demo")}
+                    aria-label={i18n("view demo")}
                 >
                     <PlayCircle aria-hidden="true" />
                     {i18n('view demo')}
