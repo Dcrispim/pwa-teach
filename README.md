@@ -1,109 +1,112 @@
 
 ## 📌Teach
 
-Este projeto é uma **Single Page Application (SPA)** desenvolvida com base em um protótipo criado no **Figma**, com o objetivo de ser construída em **7 dias**.
+[🇧🇷 Português](README.pt.md)
+
+This project is a **Single Page Application (SPA)** developed on the basis of a prototype created in **Figma**, with the aim of being built in **7 days**.
 
 ---
-## 🧱 Stack Utilizada
+## 🧱 Stack
 
-Este projeto foi desenvolvido utilizando as seguintes tecnologias:
+This project was developed using the following technologies:
 
-- **Next.js** – Framework React para aplicações full-stack
-- **TypeScript** – Tipagem estática para maior confiabilidade e produtividade
-- **Tailwind CSS** – Utilitário CSS moderno para estilização rápida e responsiva
-- **Lucide React** – Biblioteca de ícones em React
-- **Next-Intl** – Internacionalização de aplicações Next.js com suporte a namespaces e SSR
-- **ESLint** – Padronização de código com linting e formatação
+- **Next.js** - React framework for full-stack applications
+- **TypeScript** - Static typing for greater reliability and productivity
+- **Tailwind CSS** - Modern CSS utility for fast and responsive styling
+- **Lucide React** - Icon library in React
+- **Next-Intl** - Internationalisation of Next.js applications with namespace and SSR support
+- **ESLint** - Code standardisation with linting and formatting
 
 ---
-## 📝 Considerações Gerais sobre o Projeto
+## 📝 General Considerations about the Project
 
-### 🌐 Internacionalização (i18n)
+### 🌐 Internationalisation (i18n)
 
-O projeto segue um modelo simplificado de tradução, adequado ao seu escopo. Toda a estrutura de tradução está centralizada em uma **única página de tradução**, chamada `default`, o que evita a necessidade de especificar a namespace em cada chamada.
+The project follows a simplified translation model, suited to its scope. The entire translation structure is centralised in a **single translation page**, called `default`, which avoids the need to specify the namespace in each call.
 
-#### Estrutura dos Arquivos
+#### File Structure
 
-- O arquivo `pt.ts` contém as traduções em português.
-- O arquivo `en.ts` é uma **cópia de `pt.ts`**, mas com as chaves como valores, pois os textos estão originalmente em inglês.
-- Quando um texto é apenas um mock, ele foi marcado com uma tag [PT-BR] para indicar que houve uma tradução, mesmo que o conteúdo final ainda não esteja definido.
+- The file `en.ts` contains the Portuguese translations.
+- The file `en.ts` is a **copy of `en.ts`**, but with the keys as values, because the texts are originally in English.
+- When a text is just a mock, it has been marked with a [PT-BR] tag to indicate that there has been a translation, even if the final content is not yet defined.
 
 
-Exemplo de entrada em `en.ts` customizada, principalmente para textos grandes:
+
+Example of a customised `en.ts` entry, especially for large texts:
 ```ts
 'teach-students-worldwide-description': 'Amet nunc diam orci duis ut sit diam arcu, nec. ' +
   'Eleifend proin massa tincidunt viverra lectus pulvinar. ' +
   'Nunc ipsum est pellentesque turpis ultricies. em',
 ````
 
-#### Hook e Wrapper
+#### Hook and Wrapper
 
-A função `useTranslations` (ou `getTranslations`) está envolta em um wrapper (`translation.ts`) que já assume a namespace `default` como padrão, permitindo o uso direto de chaves:
+The `useTranslations` (or `getTranslations`) function is wrapped in a wrapper (`translation.ts`) that already assumes the `default` namespace by default, allowing the direct use of keys:
 
 ```ts
 const t = useTranslations();
 t('some.key'); // Equivale a t('default.some.key')
 ```
 
-Essa abordagem pode ser facilmente adaptada para múltiplas namespaces, se necessário em projetos futuros.
+This approach can be easily adapted to multiple namespaces if necessary in future projects.
 
-#### Depoimentos e Textos Estáticos
+#### Statements and Static Texts
 
-Alguns cards aparentam conter **depoimentos ou textos que normalmente viriam de uma fonte externa**. Como o projeto não possui back-end, optou-se por aplicar a tradução também nesses textos, mesmo que em um projeto real essa decisão precisaria ser avaliada conforme o escopo — podendo ser tratados como conteúdo externo sem tradução.
+Some cards appear to contain **statements or texts that would normally come from an external source**. As the project does not have a back-end, it was decided to apply translation to these texts as well, even though in a real project this decision would need to be evaluated according to the scope - they could be treated as external content without translation.
 
 ---
 
-### 🎨 Design e Ícones
+### 🎨 Design and Icons
 
-#### Alterações Visuais em Ícones
+#### Visual Changes to Icons
 
-Utiliza-se o pacote **Lucide React** para os ícones, por ser open-source, o que gerou **pequenas divergências em relação ao protótipo**. Um exemplo claro é o ícone de acessibilidade:
+The **Lucide React** package is used for the icons, as it is open-source, which has led to **small divergences from the prototype**. A clear example is the accessibility icon:
 
 ![Comparação](image.png)
 
-* **Protótipo:** ícone "stand" (posição em T).
-* **Lucide:** ícone com o corpo mais aberto (formato de estrela).
+**Prototype:** "stand" icon (T-shaped position).
+**Lucide:** icon with a more open body (star shape).
 
-Essa diferença foi considerada **aceitável dentro do escopo atual**, mas em um projeto real seria discutido com a equipe de design.
+This difference was considered **acceptable within the current scope**, but in a real project it would be discussed with the design team.
 
-#### Ícones Decorativos e Posição
+#### Decorative Icons and Position
 
-Alguns ícones decorativos do protótipo aparecem como elementos **estáticos no fundo**, simulando textura e volumetria. No projeto, optou-se por usar **animações e distribuição aleatória**, criando uma ideia de partículas flutuantes com movimento, mantendo o conceito geral mas não a posição exata.
+Some of the prototype's decorative icons appear as **static elements in the background**, simulating texture and volumetry. In the project, it was decided to use **animations and random distribution**, creating an idea of floating particles with movement, maintaining the general concept but not the exact position.
 
-Essa foi uma **decisão consciente** e **condizente com o escopo**, mas reforça-se que, em um ambiente profissional, a proposta seria discutida com design para alinhar expectativas.
-
----
-
-### 🌍 Troca de Idioma no Footer
-
-No projeto, a **troca de idioma** está localizada no **footer**, exibindo um ícone e a sigla do idioma atual (por exemplo, `EN`, `PT`). Ao clicar, o idioma é alternado.
-
-* O ícone **mostra o idioma atual**, e não o idioma de destino ao clicar.
-* Essa decisão foi feita com base na simplicidade e clareza visual.
-
-#### 💡 Sugestão para Produção
-
-Em um projeto real, seria interessante discutir com design a possibilidade de:
-
-* Posicionar o botão de troca de idioma no **header** (mais visível).
-* Usar **bandeiras** ao lado da sigla, tornando a navegação mais intuitiva.
-
-No escopo atual, essa sugestão foi registrada apenas como observação, seguindo fielmente o protótipo.
+This was a **conscious decision** and **conducive to the scope**, but it is emphasised that, in a professional environment, the proposal would be discussed with design to align expectations.
 
 ---
 
-## 🎠 Considerações sobre o Carrossel da Seção Três
+### 🌍 Language Switching in the Footer
 
-No protótipo de design (Seção Três), foi indicada a presença de um carrossel. No entanto, uma das formas gráficas presentes no banner ultrapassava os limites do próprio carrossel, o que em implementações reais causaria o corte desse conteúdo — já que carrosséis, por padrão, ocultam tudo que excede seus limites visuais.
+In the project, the **language switcher** is located in the **footer**, displaying an icon and the acronym of the current language (e.g. `EN`, `PT`). When clicked, the language is switched.
 
-Diante disso, foi necessário tomar uma decisão entre:
+* The icon **shows the current language**, not the target language when you click.
+* This decision was made on the basis of simplicity and visual clarity.
 
-- Manter uma imagem estática fiel ao design, mas sem recurso real de carrossel, **ou**
-- Implementar o carrossel funcional, com ajustes nos tamanhos e posicionamentos dos elementos visuais para manter a **coesão estética** com o protótipo.
+#### 💡 Suggestion for Production
 
-Optou-se pela **segunda abordagem**, priorizando a recurso interativa do carrossel. Para isso, foram feitas adequações sutis nas formas e proporções dos elementos, garantindo que tudo se mantivesse dentro dos limites visuais sem comprometer a harmonia geral proposta pelo design original.
+In a real project, it would be interesting to discuss with design the possibility of:
 
-> **Nota:** Seria tecnicamente viável implementar uma solução customizada que unisse ambas as abordagens — com elementos ultrapassando visualmente os limites do carrossel — mas, considerando o prazo reduzido de entrega do projeto, essa opção foi descartada em favor de uma solução mais direta e funcional.
+* Position the language switcher in the **header** (more visible).
+* Use **flags** next to the acronym, making navigation more intuitive.
+
+In the current scope, this suggestion has only been registered as an observation, faithfully following the prototype.
+
+---
+
+## 🎠 Considerations about the Carousel in Section Three
+
+In the design prototype (Section Three), the presence of a carousel was indicated. However, one of the graphic shapes on the banner exceeded the limits of the carousel itself, which in real implementations would cause this content to be cut off - since carousels, by default, hide everything that exceeds their visual limits.
+
+In view of this, a decision had to be made between:
+
+- Keeping a static image faithful to the design, but with no real carousel feature, **or**
+- Implementing the functional carousel, with adjustments to the sizes and positioning of the visual elements to maintain the **aesthetic cohesion** with the prototype.
+
+The **second approach** was chosen, prioritising the interactive feature of the carousel. To do this, subtle adjustments were made to the shapes and proportions of the elements, ensuring that everything remained within visual limits without compromising the overall harmony proposed by the original design.
+
+> Note: **It would have been technically feasible to implement a customised solution that combined both approaches - with elements visually going beyond the limits of the carousel - but, considering the project's short delivery time, this option was discarded in favour of a more direct and functional solution**.
 
 ![Carousel Funcional](image-1.png)
 
