@@ -34,6 +34,9 @@ export default {
     "by": "By",
     "hi_teach": "Hi Teach!",
     "im": "I'm",
-    "and_i_would_say": "and I would say that"
+    "and_i_would_say": "and I would say that",
+    'user-countries': 'User countries',
+    'valued-teachers': 'Valued teachers',
+    'happy-students': 'Happy students',
   }
 }

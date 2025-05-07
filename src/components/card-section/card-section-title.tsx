@@ -5,9 +5,10 @@ import { cn } from '@/lib/utils';
 type CardSectionTitleProps = {
   label?: string
   className?: string
+  id?: string
 }
 
-const CardSectionTitle: React.FC<CardSectionTitleProps> = ({ label, className }) => {
+const CardSectionTitle: React.FC<CardSectionTitleProps> = ({ label, className, ...props }) => {
   const formattedChildren = label?.toString().split(/(_.*?_)/g).map((part, index) => {
     if (part.startsWith('_') && part.endsWith('_')) {
       return (
@@ -20,7 +21,7 @@ const CardSectionTitle: React.FC<CardSectionTitleProps> = ({ label, className })
   });
 
   return (
-    <CardHeader>
+    <CardHeader {...props}>
       <CardTitle>
         <h1 className={cn(`text-5xl`, className, 'gap-x-2')}>
           {formattedChildren}

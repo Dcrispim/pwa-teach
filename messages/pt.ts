@@ -95,7 +95,10 @@ const enToPt: { [k: string]: Record<string, string> } = {
     "hi_teach": "Olá Taech!",
     "im": "Eu sou",
     "and_i_would_say": "e gostaria de falar que",
-    'Close':'Fechar'
+    'Close': 'Fechar',
+    'user-countries': 'Países com usuários',
+    'valued-teachers': 'Professores valorizados',
+    'happy-students': 'Estudantes felizes',
   }
 };
 
