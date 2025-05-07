@@ -1,0 +1,52 @@
+@tailwind utilities;
+@import "tailwindcss";
+body {
+    color: var(--color-blue-900);
+}
+
+* {
+    font-family: Roboto, sans-serif;
+
+
+}
+
+h5 {
+    font-weight: 600;
+    font-size: 16;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 56;
+}
+
+.card-underline {
+    background: url('/assets/underline.svg') no-repeat center bottom;
+    background-size: contain;
+}
+
+
+@theme {
+    --
+    --color-primary-foreground: #FFFFFF;
+    --color-primary: #EA580C;
+    --color-orange-600: #EA580C;
+
+    --color-green-100: #DCFCE7;
+    --color-green-800: #166534;
+
+    --color-blue-100: #DBEAFE;
+    --color-blue-600: #2563EB;
+    --color-blue-800: #1E40AF;
+    --color-blue-900: #0F172A;
+
+    --color-gray-400: #121619;
+    --color-gray-600: #475569;
+    --color-gray-700: #334155;
+
+    --color-purple-800: #6B21A8;
+    --color-purple-100: #F3E8FF;
+
+    --color-yellow-400: #FACC15;
+
+}
