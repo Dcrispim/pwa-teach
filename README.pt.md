@@ -5,6 +5,36 @@
 Este projeto é uma **Single Page Application (SPA)** desenvolvida com base em um protótipo criado no **Figma**, com o objetivo de ser construída em **7 dias**.
 
 ---
+
+## 🚀 Getting Started
+
+Para rodar o projeto localmente, siga os passos abaixo utilizando [pnpm](https://pnpm.io/):
+
+### 1. Clone o repositório
+
+```bash
+git clone https://github.com/Dcrispim/pwa-teach
+cd pwa-teach
+```
+
+### 2. Instale as dependências
+
+```bash
+pnpm install
+```
+
+### 3. Rode o servidor de desenvolvimento
+
+```bash
+pnpm dev
+```
+
+O projeto estará disponível em `http://localhost:3000`.
+
+> **Pré-requisitos**: É necessário ter o [Node.js](https://nodejs.org/) instalado em sua máquina, além do [pnpm](https://pnpm.io/) (pode ser instalado via `npm install -g pnpm`).
+
+
+
 ## 🧱 Stack Utilizada
 
 Este projeto foi desenvolvido utilizando as seguintes tecnologias:
