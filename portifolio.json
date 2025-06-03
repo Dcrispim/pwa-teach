@@ -1,0 +1,9 @@
+{
+    "preview":"https://raw.githubusercontent.com/Dcrispim/pwa-teach/refs/heads/main/public/portifolio/preview.svg",
+    "description":{
+        "en":"",
+        "pt":""
+    },
+    "stack":["React", "TypeScript", "Nextjs", "Tailwindcss"],
+    "link":"https://pwa-teach.vercel.app"
+}
