@@ -1,8 +1,8 @@
 {
     "preview": "https://raw.githubusercontent.com/Dcrispim/pwa-teach/refs/heads/main/public/portifolio/preview.png",
     "description":{
-        "en":"",
-        "pt":""
+        "en": "This is a modern web application built with Next.js 13 (App Router) and TypeScript, emphasizing performance, accessibility, and responsiveness. It leverages React Server Components for optimized loading and Tailwind CSS for efficient styling.\n\nA standout feature is the ParticleIcons component, which uses GSAP to dynamically animate SVG icons, adding interactivity without compromising performance. The modular structure promotes maintainability and scalability, with reusable components and clear organization.\n\nAdditionally, the project incorporates modern SEO and accessibility practices, such as the appropriate use of semantic elements (<main>, <section>) and dynamic metadata with generateMetadata, ensuring an optimized experience for users and search engines alike.",
+        "pt": "Este projeto é uma aplicação web desenvolvida com Next.js 13 (App Router) e TypeScript, focada em performance, acessibilidade e responsividade. Utiliza React Server Components para otimizar o carregamento e Tailwind CSS para estilização eficiente.\n\nUm dos destaques é o componente visual ParticleIcons, que emprega GSAP para animar ícones SVG de forma dinâmica, adicionando interatividade sem comprometer o desempenho. A estrutura modular do projeto facilita a manutenção e escalabilidade, com componentes reutilizáveis e organização clara.\n\nAlém disso, foram incorporadas práticas modernas de SEO e acessibilidade, como o uso adequado de elementos semânticos (<main>, <section>) e metadados dinâmicos com generateMetadata, garantindo uma experiência otimizada para usuários e motores de busca."
     },
     "stack":["React", "TypeScript", "Nextjs", "Tailwindcss"],
     "link":"https://pwa-teach.vercel.app"
